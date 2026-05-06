@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ken Air Services, Inc. | HVAC &amp; Generator Experts | Mobile, AL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ======================================================
+   RESET & BASE
+====================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Lato', sans-serif; color: #1a2333; background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ======================================================
+   CSS VARIABLES
+====================================================== */
+:root {
+  --blue: #0d3b6e;
+  --blue-mid: #155fa0;
+  --blue-light: #1976d2;
+  --red: #c0392b;
+  --red-hover: #e74c3c;
+  --gold: #f5a623;
+  --gray-dark: #2c3e50;
+  --gray: #5a6a7a;
+  --gray-light: #8a9bae;
+  --bg-light: #f4f7fb;
+  --bg-mid: #e9eff7;
+  --white: #ffffff;
+  --border: #d0dde9;
+  --shadow: 0 2px 16px rgba(13,59,110,0.10);
+  --shadow-lg: 0 8px 40px rgba(13,59,110,0.15);
+}
+
+/* ======================================================
+   TOP BAR
+====================================================== */
+.topbar {
+  background: var(--blue);
+  padding: 8px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.85);
+}
+.topbar strong { color: #fff; }
+.topbar-right { display: flex; align-items: center; gap: 24px; }
+.topbar a { color: rgba(255,255,255,0.85); transition: color 0.2s; }
+.topbar a:hover { color: var(--gold); }
+.topbar .stars { color: var(--gold); letter-spacing: 1px; }
+
+/* ======================================================
+   NAVIGATION
+====================================================== */
+.navbar {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--white);
+  border-bottom: 3px solid var(--blue);
+  box-shadow: var(--shadow);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 40px; height: 72px; max-width: 1400px; margin: 0 auto;
+}
+.logo { display: flex; align-items: center; }
+.logo-svg { height: 52px; width: auto; }
+.nav-links {
+  display: flex; align-items: stretch; gap: 0; height: 100%;
+}
+.nav-item {
+  position: relative; display: flex; align-items: center;
+}
+.nav-item > a {
+  padding: 0 18px; height: 100%;
+  display: flex; align-items: center;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--gray-dark);
+  border-bottom: 3px solid transparent; margin-bottom: -3px;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.nav-item > a:hover, .nav-item:hover > a { color: var(--blue); border-color: var(--blue); }
+.nav-item:hover .dropdown { display: block; }
+.dropdown {
+  display: none; position: absolute; top: 100%; left: 0;
+  background: var(--white); min-width: 220px;
+  border: 1px solid var(--border); border-top: 3px solid var(--blue);
+  box-shadow: var(--shadow-lg); z-index: 300;
+}
+.dropdown a {
+  display: block; padding: 10px 20px;
+  font-size: 0.82rem; color: var(--gray-dark); font-weight: 500;
+  border-bottom: 1px solid var(--bg-mid);
+  transition: background 0.15s, color 0.15s;
+}
+.dropdown a:hover { background: var(--bg-light); color: var(--blue); }
+.nav-ctas { display: flex; align-items: center; gap: 12px; }
+.btn-phone {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg-light); border: 1.5px solid var(--border);
+  border-radius: 6px; padding: 8px 16px;
+  font-size: 0.95rem; font-weight: 700; color: var(--blue);
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.04em; white-space: nowrap;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-phone:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+.btn-schedule {
+  background: var(--red); color: var(--white);
+  border-radius: 6px; padding: 10px 22px;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase; white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-schedule:hover { background: var(--red-hover); transform: translateY(-1px); }
+
+/* ======================================================
+   HERO
+====================================================== */
+.hero {
+  background: linear-gradient(135deg, rgba(10,45,90,0.93) 0%, rgba(15,70,140,0.88) 60%, rgba(25,100,180,0.85) 100%),
+    url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1600&q=80') center/cover no-repeat;
+  padding: 80px 40px 70px;
+  position: relative; overflow: hidden;
+  min-height: 520px;
+  display: flex; align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1400px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center;
+  position: relative; z-index: 1;
+}
+.hero-eyebrow {
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 800; line-height: 1.05;
+  color: var(--white); margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero-bullets { margin-bottom: 36px; display: flex; flex-direction: column; gap: 10px; }
+.hero-bullets li {
+  display: flex; align-items: flex-start; gap: 10px;
+  color: rgba(255,255,255,0.9); font-size: 0.95rem; font-weight: 400; line-height: 1.4;
+}
+.hero-bullets li::before { content: '✓'; color: var(--gold); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-btn-primary {
+  background: var(--red); color: var(--white);
+  padding: 16px 32px; border-radius: 6px;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.hero-btn-primary:hover { background: var(--red-hover); transform: translateY(-2px); }
+.hero-btn-outline {
+  border: 2px solid rgba(255,255,255,0.5); color: var(--white);
+  padding: 16px 32px; border-radius: 6px;
+  font-size: 0.9rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 8px;
+  transition: border-color 0.2s, background 0.2s;
+}
+.hero-btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+.hero-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px; padding: 36px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.hero-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-bottom: 20px; border-bottom: 2px solid var(--bg-mid); padding-bottom: 14px;
+}
+.card-form-group { margin-bottom: 14px; }
+.card-form-group label {
+  display: block; font-size: 0.75rem; font-weight: 700;
+  color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 5px;
+}
+.card-form-group input,
+.card-form-group select {
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid var(--border); border-radius: 6px;
+  font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--gray-dark);
+  transition: border-color 0.2s;
+}
+.card-form-group input:focus,
+.card-form-group select:focus { outline: none; border-color: var(--blue-light); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.card-submit {
+  width: 100%; padding: 14px;
+  background: var(--red); color: var(--white);
+  border-radius: 6px; font-size: 0.9rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px;
+  transition: background 0.2s;
+}
+.card-submit:hover { background: var(--red-hover); }
+.card-phone {
+  text-align: center; margin-top: 14px;
+  font-size: 0.8rem; color: var(--gray);
+}
+.card-phone a {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem; font-weight: 700; color: var(--blue);
+  letter-spacing: 0.04em; display: block; margin-top: 2px;
+}
+
+/* ======================================================
+   TRUST BAR
+====================================================== */
+.trust-bar {
+  background: var(--gold);
+  padding: 18px 40px;
+  display: flex; align-items: center; justify-content: center; gap: 48px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.85rem; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.trust-icon { font-size: 1.3rem; }
+
+/* ======================================================
+   SECTION COMMONS
+====================================================== */
+.section { padding: 80px 40px; }
+.section-inner { max-width: 1400px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 52px; }
+.section-tag {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--blue-light); margin-bottom: 12px;
+  border-left: 3px solid var(--blue-light); padding-left: 10px;
+}
+.section-tag.left { display: block; text-align: left; }
+h2.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+  color: var(--blue); line-height: 1.05; letter-spacing: 0.02em;
+}
+.section-sub {
+  font-size: 1rem; color: var(--gray); font-weight: 300; line-height: 1.7;
+  max-width: 680px; margin: 14px auto 0;
+}
+
+/* ======================================================
+   SERVICES TABS
+====================================================== */
+.services-section { background: var(--bg-light); }
+.tabs-row {
+  display: flex; gap: 0; border-bottom: 2px solid var(--border); margin-bottom: 48px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.tab-btn {
+  padding: 14px 28px; border-bottom: 3px solid transparent; margin-bottom: -2px;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gray); white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn.active, .tab-btn:hover { color: var(--blue); border-color: var(--blue); }
+.tab-panel { display: none; }
+.tab-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.service-content h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem; font-weight: 800; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 16px;
+}
+.service-content p { color: var(--gray); font-size: 0.95rem; line-height: 1.75; margin-bottom: 20px; font-weight: 300; }
+.service-links { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+.service-links a {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--blue-light); font-size: 0.9rem; font-weight: 600;
+  transition: color 0.2s;
+}
+.service-links a::before { content: '›'; font-size: 1.2rem; }
+.service-links a:hover { color: var(--blue); }
+.service-image {
+  border-radius: 12px; overflow: hidden;
+  min-height: 320px; position: relative;
+}
+.service-image img {
+  width: 100%; height: 100%; min-height: 320px;
+  object-fit: cover; display: block;
+}
+.service-image-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,59,110,0.85) 0%, transparent 100%);
+  padding: 40px 24px 24px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem; font-weight: 800; color: rgba(255,255,255,0.95);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+
+/* ======================================================
+   ABOUT STRIP
+====================================================== */
+.about-strip {
+  background: var(--blue); color: var(--white);
+  padding: 72px 40px;
+}
+.about-strip-inner {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; align-items: center;
+}
+.about-strip h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+.about-strip p { color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.75; font-weight: 300; margin-bottom: 16px; }
+.about-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.about-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.4;
+}
+.about-list li::before { content: '✓'; color: var(--gold); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+.about-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--white); color: var(--blue);
+  padding: 12px 28px; border-radius: 6px;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+}
+.about-link:hover { background: var(--gold); transform: translateY(-1px); }
+.about-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.about-stat {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; padding: 28px 24px; text-align: center;
+}
+.about-stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.8rem; font-weight: 800; color: var(--gold); line-height: 1;
+  margin-bottom: 6px;
+}
+.about-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.65); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ======================================================
+   PROMOTIONS
+====================================================== */
+.promos-section { background: var(--bg-light); }
+.promos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.promo-card {
+  background: var(--white); border-radius: 12px;
+  border: 1px solid var(--border); overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.promo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.promo-header {
+  background: var(--blue); padding: 24px;
+  text-align: center;
+}
+.promo-icon { font-size: 2.5rem; margin-bottom: 8px; }
+.promo-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem; font-weight: 800; color: var(--white);
+  text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1;
+}
+.promo-sub { font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 4px; font-weight: 500; }
+.promo-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+.promo-desc { font-size: 0.9rem; color: var(--gray); line-height: 1.6; font-weight: 300; flex: 1; margin-bottom: 20px; }
+.promo-note { font-size: 0.72rem; color: var(--gray-light); margin-bottom: 14px; font-style: italic; }
+.promo-cta {
+  display: block; text-align: center;
+  background: var(--red); color: var(--white);
+  padding: 12px; border-radius: 6px;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s;
+}
+.promo-cta:hover { background: var(--red-hover); }
+.promos-view-all { text-align: center; margin-top: 32px; }
+.promos-view-all a {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 2px solid var(--blue); color: var(--blue);
+  padding: 12px 32px; border-radius: 6px;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+.promos-view-all a:hover { background: var(--blue); color: var(--white); }
+
+/* ======================================================
+   REVIEWS
+====================================================== */
+.reviews-section { background: var(--white); }
+.reviews-overall {
+  display: flex; align-items: center; gap: 20px; justify-content: center;
+  margin-bottom: 48px;
+}
+.reviews-score {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 5rem; font-weight: 800; color: var(--blue); line-height: 1;
+}
+.reviews-info .stars { color: var(--gold); font-size: 1.6rem; letter-spacing: 2px; }
+.reviews-info .count { font-size: 0.85rem; color: var(--gray); margin-top: 4px; }
+.reviews-info .source { font-size: 0.75rem; color: var(--gray-light); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review-card {
+  background: var(--bg-light); border-radius: 12px;
+  border: 1px solid var(--border); padding: 28px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.review-card:hover { transform: translateY(-4px); border-color: var(--blue-mid); }
+.review-stars { color: var(--gold); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 12px; }
+.review-text {
+  font-size: 0.9rem; color: var(--gray-dark); line-height: 1.7;
+  font-weight: 300; margin-bottom: 20px; font-style: italic;
+}
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--blue); display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.82rem; color: var(--white); flex-shrink: 0;
+}
+.reviewer-name { font-weight: 700; font-size: 0.88rem; color: var(--gray-dark); }
+.reviewer-meta { font-size: 0.73rem; color: var(--gray-light); margin-top: 2px; }
+.reviews-cta { text-align: center; margin-top: 40px; }
+.reviews-cta a {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue); color: var(--white);
+  padding: 14px 36px; border-radius: 6px;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  transition: background 0.2s;
+}
+.reviews-cta a:hover { background: var(--blue-light); }
+
+/* ======================================================
+   CERTS BAR
+====================================================== */
+.certs-bar { background: var(--bg-mid); padding: 48px 40px; }
+.certs-inner { max-width: 1400px; margin: 0 auto; }
+.certs-title {
+  text-align: center; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 32px;
+}
+.certs-grid {
+  display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; align-items: center;
+}
+.cert-badge {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 10px; padding: 18px 24px;
+  text-align: center; min-width: 140px;
+  box-shadow: var(--shadow);
+}
+.cert-icon { font-size: 2rem; margin-bottom: 8px; }
+.cert-name { font-size: 0.72rem; font-weight: 700; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.3; }
+
+/* ======================================================
+   MAINTENANCE PLAN
+====================================================== */
+.maintenance-section {
+  background: linear-gradient(135deg, var(--blue) 0%, #1a5fa8 100%);
+  padding: 80px 40px; color: var(--white);
+}
+.maintenance-inner {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.maintenance-inner h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+.maint-tag { font-size: 0.75rem; font-weight: 700; color: var(--gold); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; display: block; }
+.maintenance-inner p { color: rgba(255,255,255,0.8); line-height: 1.7; font-size: 0.95rem; font-weight: 300; margin-bottom: 28px; }
+.maint-benefits { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.maint-benefit {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: rgba(255,255,255,0.06); border-radius: 8px; padding: 14px 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.maint-benefit-icon { font-size: 1.4rem; flex-shrink: 0; }
+.maint-benefit-text strong { display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 2px; }
+.maint-benefit-text span { font-size: 0.82rem; color: rgba(255,255,255,0.65); }
+.maint-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--blue);
+  padding: 14px 32px; border-radius: 6px;
+  font-size: 0.9rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+}
+.maint-cta:hover { background: #ffc107; transform: translateY(-2px); }
+.maint-card {
+  background: rgba(255,255,255,0.95); border-radius: 16px; padding: 40px;
+  color: var(--gray-dark);
+}
+.maint-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.8rem; font-weight: 800; color: var(--blue);
+  text-transform: uppercase; margin-bottom: 4px;
+}
+.maint-card .price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3.5rem; font-weight: 800; color: var(--red); line-height: 1;
+  margin: 12px 0 4px;
+}
+.maint-card .price-sub { font-size: 0.8rem; color: var(--gray); margin-bottom: 20px; }
+.maint-card-perks { border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.perk { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--gray-dark); }
+.perk::before { content: '✓'; color: var(--blue); font-weight: 800; flex-shrink: 0; }
+
+/* ======================================================
+   CONTACT FORM SECTION
+====================================================== */
+.contact-section { background: var(--bg-light); padding: 80px 40px; }
+.contact-inner {
+  max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start;
+}
+.contact-info h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.02em; margin-bottom: 16px;
+}
+.contact-info p { font-size: 0.95rem; color: var(--gray); line-height: 1.75; font-weight: 300; margin-bottom: 32px; }
+.contact-detail { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+.contact-detail-icon {
+  width: 44px; height: 44px; border-radius: 8px;
+  background: var(--blue); display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.contact-detail-text strong { display: block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-light); margin-bottom: 2px; }
+.contact-detail-text a, .contact-detail-text span { font-size: 1.05rem; font-weight: 600; color: var(--blue); }
+.contact-form-card {
+  background: var(--white); border-radius: 14px;
+  border: 1px solid var(--border); padding: 40px;
+  box-shadow: var(--shadow-lg);
+}
+.contact-form-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem; font-weight: 800; color: var(--blue);
+  text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 24px;
+  padding-bottom: 16px; border-bottom: 2px solid var(--bg-mid);
+}
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 0.75rem; font-weight: 700; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 5px; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1.5px solid var(--border); border-radius: 6px;
+  font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--gray-dark);
+  transition: border-color 0.2s;
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { outline: none; border-color: var(--blue-light); }
+.form-submit {
+  width: 100%; padding: 16px;
+  background: var(--red); color: var(--white);
+  border-radius: 6px; font-size: 0.9rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; margin-top: 8px;
+  transition: background 0.2s;
+}
+.form-submit:hover { background: var(--red-hover); }
+
+/* ======================================================
+   SERVICE AREAS
+====================================================== */
+.areas-section { background: var(--white); padding: 60px 40px; }
+.areas-inner { max-width: 1400px; margin: 0 auto; }
+.areas-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;
+  margin-top: 36px;
+}
+.area-tag {
+  background: var(--bg-light); border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px 16px; font-size: 0.85rem; font-weight: 600;
+  color: var(--blue-light); text-align: center;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.area-tag:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
+
+/* ======================================================
+   FOOTER
+====================================================== */
+footer {
+  background: var(--gray-dark); color: rgba(255,255,255,0.8);
+}
+.footer-main {
+  padding: 60px 40px 40px; max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px;
+}
+.footer-brand .logo { margin-bottom: 16px; }
+.footer-brand .logo .name { color: var(--white); }
+.footer-brand .logo .sub { color: rgba(255,255,255,0.5); }
+.footer-brand p { font-size: 0.85rem; line-height: 1.7; font-weight: 300; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+.footer-phone {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--red); color: var(--white);
+  padding: 10px 20px; border-radius: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem; font-weight: 700; letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.footer-phone:hover { background: var(--red-hover); }
+.footer-col h4 {
+  font-size: 0.75rem; font-weight: 800; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+}
+.footer-col ul { display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a {
+  font-size: 0.85rem; color: rgba(255,255,255,0.65); font-weight: 300;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--white); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 40px; max-width: 1400px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.4); }
+.footer-license { font-size: 0.72rem; color: rgba(255,255,255,0.35); text-align: right; }
+
+/* ======================================================
+   STICKY CTA (MOBILE)
+====================================================== */
+.sticky-cta {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+  background: var(--red); color: var(--white);
+  padding: 16px; text-align: center;
+  font-weight: 700; font-size: 1rem; letter-spacing: 0.04em;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+@media (max-width: 1100px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { max-width: 480px; }
+  .about-strip-inner { grid-template-columns: 1fr; }
+  .maintenance-inner { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-main { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 860px) {
+  .topbar { padding: 8px 20px; font-size: 0.72rem; }
+  .nav-inner { padding: 0 20px; }
+  .nav-links { display: none; }
+  .section, .hero { padding: 60px 20px; }
+  .trust-bar { gap: 20px; }
+  .promos-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .tab-panel.active { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .footer-main { grid-template-columns: 1fr; padding: 40px 20px; }
+  .footer-bottom { padding: 16px 20px; flex-direction: column; text-align: center; }
+  .footer-license { text-align: center; }
+  .sticky-cta { display: block; }
+  body { padding-bottom: 60px; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2.4rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .trust-item { font-size: 0.72rem; }
+  .trust-icon { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ======================================================
+     TOP BAR
+====================================================== -->
+<div class="topbar">
+  <div><strong>Ken Air Services, Inc.</strong> — Licensed in AL &amp; MS · AL Lic. #03158 · MS Lic. #50923</div>
+  <div class="topbar-right">
+    <span class="stars">★★★★★</span>
+    <span>5.0 · 10 Google Reviews</span>
+    <a href="tel:2514215742">📞 (251) 421-5742</a>
+  </div>
+</div>
+
+<!-- ======================================================
+     NAVIGATION
+====================================================== -->
+<header>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <svg class="logo-svg" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+          <!-- Ken Air centered -->
+          <text x="120" y="36" font-family="Arial Black, sans-serif" font-weight="900" font-size="34" fill="#0d3b6e" font-style="italic" letter-spacing="-1" text-anchor="middle">Ken Air</text>
+          <!-- Lines on either side, above the Services Inc text -->
+          <line x1="4" y1="42" x2="62" y2="42" stroke="#0d3b6e" stroke-width="1.5"/>
+          <line x1="178" y1="42" x2="236" y2="42" stroke="#0d3b6e" stroke-width="1.5"/>
+          <!-- SERVICES INC centered below lines -->
+          <text x="120" y="55" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="#0d3b6e" text-anchor="middle" letter-spacing="3">SERVICES, INC</text>
+        </svg>
+      </a>
+
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="#services">Air Conditioning ▾</a>
+          <div class="dropdown">
+            <a href="#services">A/C System Repair</a>
+            <a href="#services">A/C System Maintenance</a>
+            <a href="#services">Install New A/C</a>
+            <a href="#services">Ductless Systems</a>
+            <a href="#services">Thermostat Installation</a>
+            <a href="#services">Thermostat Repair</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#services">Heating ▾</a>
+          <div class="dropdown">
+            <a href="#services">Heating System Repair</a>
+            <a href="#services">Heating System Maintenance</a>
+            <a href="#services">Heating System Installation</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#services">Duct &amp; Vent ▾</a>
+          <div class="dropdown">
+            <a href="#services">Duct &amp; Vent Installation</a>
+            <a href="#services">Duct &amp; Vent Repair</a>
+            <a href="#services">HVAC System Maintenance</a>
+            <a href="#services">Blower Door Testing</a>
+            <a href="#services">Duct Blast Testing</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#services">Generators ▾</a>
+          <div class="dropdown">
+            <a href="#services">Generator Sales</a>
+            <a href="#services">Generator Installation</a>
+            <a href="#services">Generator Service</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="#financing">Financing</a></li>
+        <li class="nav-item"><a href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-ctas">
+        <a href="tel:2514215742" class="btn-phone">📞 (251) 421-5742</a>
+        <a href="#contact" class="btn-schedule">Schedule Now</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">⭐ 5.0 Stars · Serving Mobile, AL &amp; Nearby Areas</div>
+      <h1>Mobile's Most Trusted<br><em>HVAC Professionals</em></h1>
+      <ul class="hero-bullets">
+        <li>Same-Day Emergency Service Available</li>
+        <li>100% Satisfaction Guarantee on Every Job</li>
+        <li>Licensed &amp; Insured HVAC Experts</li>
+        <li>Home Standby Generator Sales, Install &amp; Service</li>
+        <li>Honest Pricing — No Surprises</li>
+      </ul>
+      <div class="hero-ctas">
+        <a href="tel:2514215742" class="hero-btn-primary">📞 Call (251) 421-5742</a>
+        <a href="#contact" class="hero-btn-outline">Schedule Service →</a>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div style="text-align:center; margin-bottom:20px; padding-bottom:20px; border-bottom:2px solid var(--bg-mid);">
+          <div style="font-size:3rem; margin-bottom:8px;">⭐⭐⭐⭐⭐</div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-size:2.2rem; font-weight:800; color:var(--blue); line-height:1;">5.0 Rating</div>
+          <div style="font-size:0.82rem; color:var(--gray); margin-top:4px;">10 Verified Google Reviews</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.88rem; color:var(--gray-dark);">
+            <span style="color:#27ae60; font-weight:800; font-size:1rem;">✓</span> Serving Mobile, AL &amp; Mississippi
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.88rem; color:var(--gray-dark);">
+            <span style="color:#27ae60; font-weight:800; font-size:1rem;">✓</span> AL Lic. #03158 · MS Lic. #50923
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.88rem; color:var(--gray-dark);">
+            <span style="color:#27ae60; font-weight:800; font-size:1rem;">✓</span> In Business Since 2003
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.88rem; color:var(--gray-dark);">
+            <span style="color:#27ae60; font-weight:800; font-size:1rem;">✓</span> Regions Bank Financing Available
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:0.88rem; color:var(--gray-dark);">
+            <span style="color:#27ae60; font-weight:800; font-size:1rem;">✓</span> Same-Day Emergency Service
+          </div>
+        </div>
+        <a href="tel:2514215742" style="display:block; text-align:center; background:var(--red); color:white; padding:16px; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:1.6rem; font-weight:800; letter-spacing:0.04em; margin-bottom:10px;">📞 (251) 421-5742</a>
+        <a href="sms:2514215742" style="display:block; text-align:center; background:var(--bg-light); color:var(--blue); border:1.5px solid var(--border); padding:12px; border-radius:6px; font-size:0.85rem; font-weight:700; letter-spacing:0.04em;">💬 Send a Text</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     TRUST BAR
+====================================================== -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🏆</span> 5.0 Google Rating</div>
+  <div class="trust-item"><span class="trust-icon">🛡️</span> 100% Satisfaction Guarantee</div>
+  <div class="trust-item"><span class="trust-icon">⚡</span> Same-Day Emergency Service</div>
+  <div class="trust-item"><span class="trust-icon">📍</span> Locally Owned &amp; Operated</div>
+  <div class="trust-item"><span class="trust-icon">✅</span> Licensed &amp; Insured</div>
+</div>
+
+<!-- ======================================================
+     SERVICES TABS
+====================================================== -->
+<section class="services-section section" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">What We Do</div>
+      <h2 class="section-title">Complete Home Comfort Solutions</h2>
+      <p class="section-sub">From emergency repairs to full system installs, Ken Air Services covers all your HVAC and generator needs across Mobile and the surrounding Gulf Coast area.</p>
+    </div>
+
+    <div class="tabs-row">
+      <button class="tab-btn active" onclick="showTab('ac', this)">Air Conditioning</button>
+      <button class="tab-btn" onclick="showTab('heating', this)">Heating</button>
+      <button class="tab-btn" onclick="showTab('duct', this)">Duct &amp; Vent</button>
+      <button class="tab-btn" onclick="showTab('ductless', this)">Ductless Systems</button>
+      <button class="tab-btn" onclick="showTab('thermostat', this)">Thermostats</button>
+      <button class="tab-btn" onclick="showTab('generator', this)">Generators</button>
+    </div>
+
+    <!-- A/C -->
+    <div class="tab-panel active" id="tab-ac">
+      <div class="service-content">
+        <h3>Air Conditioning</h3>
+        <p>Mobile's heat and humidity demand a reliable, high-performing air conditioning system. Ken Air Services provides expert diagnosis, repair, and maintenance for all makes and models — keeping your home comfortable no matter how hot it gets outside.</p>
+        <p>Whether your system is short-cycling, not cooling, or has stopped altogether, our technicians diagnose the problem fast and fix it right the first time.</p>
+        <div class="service-links">
+          <a href="#contact">A/C System Repair</a>
+          <a href="#contact">A/C System Maintenance</a>
+          <a href="#contact">New A/C System Installation</a>
+          <a href="#contact">HVAC System Maintenance</a>
+        </div>
+        <a href="#contact" class="hero-btn-primary" style="display:inline-flex;">Schedule A/C Service →</a>
+      </div>
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80" alt="HVAC technician servicing an air conditioning unit">
+        <div class="service-image-label">Air Conditioning</div>
+      </div>
+    </div>
+
+    <!-- Heating -->
+    <div class="tab-panel" id="tab-heating">
+      <div class="service-content">
+        <h3>Heating Systems</h3>
+        <p>When a cold front hits the Gulf Coast, you need a heating system you can count on. Ken Air Services handles installation, maintenance, and repair for all types of home heating equipment — so you stay warm when it matters.</p>
+        <div class="service-links">
+          <a href="#contact">Heating System Repair</a>
+          <a href="#contact">Heating System Maintenance</a>
+          <a href="#contact">Heating System Installation</a>
+        </div>
+        <a href="#contact" class="hero-btn-primary" style="display:inline-flex;">Schedule Heating Service →</a>
+      </div>
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80" alt="Home heating system thermostat control">
+        <div class="service-image-label">Heating Systems</div>
+      </div>
+    </div>
+
+    <!-- Duct & Vent -->
+    <div class="tab-panel" id="tab-duct">
+      <div class="service-content">
+        <h3>Duct &amp; Vent Services</h3>
+        <p>Leaky or poorly installed ductwork can cost you hundreds each year in wasted energy. Our team provides professional duct installation, repair, and sealing to maximize airflow, improve indoor air quality, and lower your utility bills. We also offer <strong>blower door testing</strong> and <strong>duct blast testing</strong> — diagnostic tools that pinpoint exactly where your home is losing conditioned air so we can fix it efficiently.</p>
+        <div class="service-links">
+          <a href="#contact">HVAC Duct &amp; Vent Installation</a>
+          <a href="#contact">HVAC Duct &amp; Vent Repair</a>
+          <a href="#contact">Blower Door Testing</a>
+          <a href="#contact">Duct Blast Testing</a>
+        </div>
+        <a href="#contact" class="hero-btn-primary" style="display:inline-flex;">Schedule Duct Service →</a>
+      </div>
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="HVAC ductwork installation in ceiling">
+        <div class="service-image-label">Duct &amp; Vent</div>
+      </div>
+    </div>
+
+    <!-- Ductless -->
+    <div class="tab-panel" id="tab-ductless">
+      <div class="service-content">
+        <h3>Ductless Mini-Split Systems</h3>
+        <p>Perfect for room additions, sunrooms, garages, or homes without existing ductwork — ductless mini-split systems deliver targeted heating and cooling with exceptional energy efficiency. We handle both installation and ongoing service.</p>
+        <div class="service-links">
+          <a href="#contact">Ductless System Installation</a>
+          <a href="#contact">Ductless System Repair &amp; Service</a>
+          <a href="#contact">Multi-Zone System Design</a>
+        </div>
+        <a href="#contact" class="hero-btn-primary" style="display:inline-flex;">Learn About Ductless →</a>
+      </div>
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Ductless mini-split air conditioning unit on wall">
+        <div class="service-image-label">Ductless Systems</div>
+      </div>
+    </div>
+
+    <!-- Thermostat -->
+    <div class="tab-panel" id="tab-thermostat">
+      <div class="service-content">
+        <h3>Thermostat Services</h3>
+        <p>A properly calibrated thermostat is the brain of your HVAC system. We install, repair, and program all thermostat types — including smart/Wi-Fi thermostats — to give you better control and energy savings.</p>
+        <div class="service-links">
+          <a href="#contact">Thermostat Installation</a>
+          <a href="#contact">Thermostat Repair</a>
+          <a href="#contact">Smart Thermostat Upgrade</a>
+        </div>
+        <a href="#contact" class="hero-btn-primary" style="display:inline-flex;">Upgrade Your Thermostat →</a>
+      </div>
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&q=80" alt="Smart thermostat on home wall">
+        <div class="service-image-label">Thermostats</div>
+      </div>
+    </div>
+
+    <!-- Generators -->
+    <div class="tab-panel" id="tab-generator">
+      <div class="service-content">
+        <h3>Home Standby Generators</h3>
+        <p>Gulf Coast storms can knock out power for days. A whole-home standby generator automatically keeps your lights on, your AC running, and your family safe — no manual start required. We handle sales, installation, and ongoing service.</p>
+        <div class="service-links">
+          <a href="#contact">Generator Sales &amp; Sizing</a>
+          <a href="#contact">Generator Installation</a>
+          <a href="#contact">Generator Maintenance &amp; Service</a>
+        </div>
+        <a href="#contact" class="hero-btn-primary" style="display:inline-flex;">Get a Generator Quote →</a>
+      </div>
+      <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80" alt="Home standby generator installed outside house">
+        <div class="service-image-label">Standby Generators</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     ABOUT STRIP
+====================================================== -->
+<section class="about-strip">
+  <div class="about-strip-inner">
+    <div>
+      <h2>The Professionals You Can Trust in Mobile, AL</h2>
+      <p>Ken Air Services is owned and operated by <strong>Ken Grice</strong>, a local HVAC expert who has been serving Mobile County and the surrounding Gulf Coast communities since 2003. Ken has built his reputation one satisfied customer at a time — through honest assessments, quality workmanship, and fair pricing on every job, large or small.</p>
+      <p>When your comfort is on the line, you deserve a technician who shows up on time, explains exactly what's happening, and does the job right. That's the Ken Air promise — and it's why customers keep calling him back for years.</p>
+      <ul class="about-list">
+        <li>Locally Owned &amp; Operated — We Live Here Too</li>
+        <li>100% Satisfaction Guarantee on Every Job</li>
+        <li>Always Upfront Pricing — No Hidden Fees</li>
+        <li>Same-Day Emergency Service Available</li>
+        <li>Licensed, Bonded &amp; Insured</li>
+      </ul>
+      <a href="#contact" class="about-link">Schedule Service Today →</a>
+    </div>
+    <div class="about-stats">
+      <div class="about-stat">
+        <div class="about-stat-num">5.0★</div>
+        <div class="about-stat-label">Google Rating</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">Since<br>2003</div>
+        <div class="about-stat-label">In Business</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">22+</div>
+        <div class="about-stat-label">Years in Business</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-num">100%</div>
+        <div class="about-stat-label">Satisfaction Guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PROMOTIONS
+====================================================== -->
+<section class="promos-section section">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Current Offers</div>
+      <h2 class="section-title">Great Comfort for Less</h2>
+      <p class="section-sub">Take advantage of our current specials on HVAC service, replacement systems, and generator installation. Call for details — offers are limited time.</p>
+    </div>
+    <div class="promos-grid">
+      <div class="promo-card">
+        <div class="promo-header">
+          <div class="promo-icon">🆓</div>
+          <div class="promo-title">Free Service Call</div>
+          <div class="promo-sub">With any repair — new customers</div>
+        </div>
+        <div class="promo-body">
+          <p class="promo-desc">First-time customers receive a complimentary service call when scheduling any HVAC repair. We'll diagnose the problem and give you an honest, upfront quote before any work begins.</p>
+          <p class="promo-note">*Restrictions apply. Cannot be combined with other offers. Call for details.</p>
+          <a href="tel:2514215742" class="promo-cta">📞 Call to Redeem</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <div class="promo-header">
+          <div class="promo-icon">❄️</div>
+          <div class="promo-title">AC Tune-Up Special</div>
+          <div class="promo-sub">Keep your system at peak performance</div>
+        </div>
+        <div class="promo-body">
+          <p class="promo-desc">Schedule your annual A/C maintenance tune-up and we'll inspect, clean, and optimize your system to run at peak efficiency — before the Mobile summer heat arrives in full force.</p>
+          <p class="promo-note">*Call for current pricing. Seasonal availability may apply.</p>
+          <a href="tel:2514215742" class="promo-cta">📞 Call to Schedule</a>
+        </div>
+      </div>
+      <div class="promo-card">
+        <div class="promo-header">
+          <div class="promo-icon">⚡</div>
+          <div class="promo-title">Generator Quote</div>
+          <div class="promo-sub">Free in-home estimate</div>
+        </div>
+        <div class="promo-body">
+          <p class="promo-desc">Interested in a whole-home standby generator? We'll come to your home, assess your needs, and provide a complete, no-obligation quote for equipment and installation — 100% free.</p>
+          <p class="promo-note">*In-home estimates available for generator system installations.</p>
+          <a href="tel:2514215742" class="promo-cta">📞 Request Free Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="promos-view-all">
+      <a href="tel:2514215742">📞 Call (251) 421-5742 for Current Specials</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FINANCING
+====================================================== -->
+<section class="section" id="financing" style="background: var(--white);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Financing Available</div>
+      <h2 class="section-title">Don't Let Budget Stop Your Comfort</h2>
+      <p class="section-sub">Ken Air Services has partnered with Regions Bank to offer flexible home improvement financing — so you can get the system you need today and pay over time.</p>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 1000px; margin: 0 auto;">
+      <div>
+        <div style="background: var(--bg-light); border: 1px solid var(--border); border-radius: 16px; padding: 36px; text-align: center;">
+          <div style="background: #3a7d44; border-radius: 12px; padding: 28px 24px 20px; margin-bottom: 20px;">
+            <div style="font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px;">Traditional Installment Loan</div>
+            <div style="font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 4px;">As low as<br>8.99%<span style="font-size:1.2rem"> APR*</span></div>
+            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.85); margin-top: 8px;">$1,000 – $35,000 available</div>
+          </div>
+          <a href="https://prequalification.enerbank.com/apply/loanproduct?sponsorPhoneNumber=8448011617&contractorNumber=111&loanCode=DEL2622&contractorEmail=kelley@kenairservices.com" target="_blank"
+            style="display:block; background: #3a7d44; color: white; padding: 14px 24px; border-radius: 8px; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; transition: background 0.2s; margin-bottom: 14px;"
+            onmouseover="this.style.background='#2d6235'" onmouseout="this.style.background='#3a7d44'">
+            PreQualify Now — Start My Project
+          </a>
+          <div style="font-size: 0.75rem; color: var(--gray-light); line-height: 1.5;">Powered by <strong style="color:var(--gray);">Regions Bank</strong> · Member FDIC<br>Soft credit pull to PreQualify — won't affect your score</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:800; color:var(--blue); text-transform:uppercase; margin-bottom:16px;">How It Works</h3>
+        <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:28px;">
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <div style="width:32px; height:32px; border-radius:50%; background:var(--blue); color:white; font-weight:800; font-size:0.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</div>
+            <div><strong style="display:block; margin-bottom:3px;">PreQualify Online</strong><span style="font-size:0.88rem; color:var(--gray);">Takes just a few minutes. Uses a soft credit pull — no impact to your credit score.</span></div>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <div style="width:32px; height:32px; border-radius:50%; background:var(--blue); color:white; font-weight:800; font-size:0.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</div>
+            <div><strong style="display:block; margin-bottom:3px;">Choose Your Loan</strong><span style="font-size:0.88rem; color:var(--gray);">Flexible terms from 12 to 144 months. Borrow $1,000–$35,000 on approved credit.</span></div>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <div style="width:32px; height:32px; border-radius:50%; background:var(--blue); color:white; font-weight:800; font-size:0.9rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</div>
+            <div><strong style="display:block; margin-bottom:3px;">Get Your System Installed</strong><span style="font-size:0.88rem; color:var(--gray);">We schedule your installation and take care of the rest. Stay comfortable year-round.</span></div>
+          </div>
+        </div>
+        <p style="font-size:0.72rem; color:var(--gray-light); line-height:1.6;">*Credit and loans provided by Regions Bank, Member FDIC (650 S. Main St., Suite 1000, Salt Lake City, UT 84101) on approved credit, for a limited time. 8.99%–24.49% fixed APR, subject to change. Minimum loan amounts apply. Repayment terms vary from 12 to 144 months. Monthly payments vary from $11.49 to $30.27 per $1,000 borrowed. The minimum monthly payment will be no less than $50.00.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     REVIEWS
+====================================================== -->
+<section class="reviews-section section" id="reviews">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Customer Reviews</div>
+      <h2 class="section-title">Don't Take Our Word for It</h2>
+    </div>
+    <div class="reviews-overall">
+      <div class="reviews-score">5.0</div>
+      <div class="reviews-info">
+        <div class="stars">★★★★★</div>
+        <div class="count">Based on 10 Google Reviews</div>
+        <div class="source">Google · Verified Reviews</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"If you want someone who is honest and does a great job at a fair price, then Ken Air Services is who you want. My husband and I have used him for all our A/C needs for years and recommend him to everyone we know."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">AO</div>
+          <div>
+            <div class="reviewer-name">A. Odom</div>
+            <div class="reviewer-meta">Mobile, AL · Google Local Guide</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"My experience with Ken Air was impeccable. My 20-year-old AC unit went out in the middle of June. Ken was booked but took time to help me troubleshoot over the phone, then sent his assistant Tommy out the next day. Ken, Tommy, and team showed up the next morning, very professional and courteous. Work was wrapped up by lunch with all systems go."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">WB</div>
+          <div>
+            <div class="reviewer-name">Will Bjorklund</div>
+            <div class="reviewer-meta">Mobile, AL · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Amazing experience with Mr. Ken and his entire team! They walk you through the entire process. Extremely professional and accommodating! They installed a new split system in our midtown home and even relocated part of the system to more efficiently cool and heat our home. If you need any HVAC done, don't hesitate — call them!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">EC</div>
+          <div>
+            <div class="reviewer-name">Elise Calametti</div>
+            <div class="reviewer-meta">Mobile, AL · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Ken Air Services was phenomenal! Came in, diagnosed the problem, added freon and fixed the issue. Very honest review of what was wrong and did not try to upsell us with a new unit as others did. I would highly recommend Ken Air!"</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">JL</div>
+          <div>
+            <div class="reviewer-name">Jamie Lett</div>
+            <div class="reviewer-meta">Mobile, AL · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"The only A/C service you should ever use. Very knowledgeable, capable and fair. Top of the line A/C service."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DS</div>
+          <div>
+            <div class="reviewer-name">Dominic Shepard</div>
+            <div class="reviewer-meta">Mobile, AL · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">"Ken is always quick to respond. His techs are very knowledgeable and work quickly. Highly recommend."</div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">BH</div>
+          <div>
+            <div class="reviewer-name">Brad Howard</div>
+            <div class="reviewer-meta">Mobile, AL · Google Local Guide</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-cta">
+      <a href="https://www.google.com/maps/search/Ken+Air+Services+Mobile+AL" target="_blank">View All Google Reviews →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CERTS BAR
+====================================================== -->
+<div class="certs-bar">
+  <div class="certs-inner">
+    <div class="certs-title">Licensed, Certified &amp; Trusted</div>
+    <div class="certs-grid">
+      <div class="cert-badge"><div class="cert-icon">🏅</div><div class="cert-name">Licensed &amp; Insured</div></div>
+      <div class="cert-badge"><div class="cert-icon">🛡️</div><div class="cert-name">AL HVAC Licensed</div></div>
+      <div class="cert-badge"><div class="cert-icon">⭐</div><div class="cert-name">5-Star Google Rating</div></div>
+      <div class="cert-badge"><div class="cert-icon">🔧</div><div class="cert-name">Factory Trained Techs</div></div>
+      <div class="cert-badge"><div class="cert-icon">✅</div><div class="cert-name">100% Satisfaction Guarantee</div></div>
+      <div class="cert-badge"><div class="cert-icon">🏠</div><div class="cert-name">Locally Owned &amp; Operated</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======================================================
+     MAINTENANCE PLAN
+====================================================== -->
+<section class="maintenance-section">
+  <div class="maintenance-inner">
+    <div>
+      <span class="maint-tag">Protect Your Investment</span>
+      <h2>HVAC Maintenance Plan</h2>
+      <p>Regular preventive maintenance is the single best thing you can do to extend the life of your HVAC system, improve efficiency, and avoid costly emergency breakdowns. Our maintenance plan makes it simple and affordable.</p>
+      <div class="maint-benefits">
+        <div class="maint-benefit">
+          <div class="maint-benefit-icon">⚡</div>
+          <div class="maint-benefit-text">
+            <strong>Priority Emergency Scheduling</strong>
+            <span>Jump to the front of the service queue when you need us most</span>
+          </div>
+        </div>
+        <div class="maint-benefit">
+          <div class="maint-benefit-icon">💰</div>
+          <div class="maint-benefit-text">
+            <strong>Discounts on Repairs</strong>
+            <span>Members save on all covered repair services throughout the year</span>
+          </div>
+        </div>
+        <div class="maint-benefit">
+          <div class="maint-benefit-icon">🔍</div>
+          <div class="maint-benefit-text">
+            <strong>Full System Inspection</strong>
+            <span>Comprehensive seasonal tune-up to keep your system running at peak performance</span>
+          </div>
+        </div>
+        <div class="maint-benefit">
+          <div class="maint-benefit-icon">📋</div>
+          <div class="maint-benefit-text">
+            <strong>Extended Equipment Life</strong>
+            <span>Properly maintained systems last significantly longer — protecting your investment</span>
+          </div>
+        </div>
+      </div>
+      <a href="#contact" class="maint-cta">Ask About Our Maintenance Plan →</a>
+    </div>
+    <div class="maint-card">
+      <h3>Annual Maintenance Plan</h3>
+      <p style="font-size:0.8rem;color:var(--gray);margin-top:6px;">Starting at</p>
+      <div class="price">Call for Pricing</div>
+      <p class="price-sub">Flexible plans tailored to your system — call (251) 421-5742 for details</p>
+      <div class="maint-card-perks">
+        <div class="perk">Two seasonal tune-ups per year (A/C &amp; Heat)</div>
+        <div class="perk">Priority emergency scheduling</div>
+        <div class="perk">Discounts on all repairs</div>
+        <div class="perk">Full system performance report</div>
+        <div class="perk">Filter replacement check</div>
+        <div class="perk">No after-hours fees for members</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CONTACT FORM
+====================================================== -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-tag left">Contact Us</div>
+      <h2>How Can We Make Your Family More Comfortable?</h2>
+      <p>Whether you need emergency repair, a new system quote, or routine maintenance, our team is ready to help. Reach out today and we'll get you taken care of fast.</p>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📞</div>
+        <div class="contact-detail-text">
+          <strong>Phone</strong>
+          <a href="tel:2514215742">(251) 421-5742</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">📍</div>
+        <div class="contact-detail-text">
+          <strong>Address</strong>
+          <span>11165 Cricket Hollow, Semmes, AL 36575</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">⏰</div>
+        <div class="contact-detail-text">
+          <strong>Hours</strong>
+          <span>Mon–Fri 7am–6pm · Emergency service available</span>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-detail-icon">⭐</div>
+        <div class="contact-detail-text">
+          <strong>Google Rating</strong>
+          <span>5.0 Stars · 10 Reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; min-height:400px; gap:24px;">
+      <div style="font-size:4rem;">📞</div>
+      <h3 style="font-size:2rem;">Give Us a Call</h3>
+      <p style="color:var(--gray); font-size:1rem; line-height:1.7; max-width:340px;">The fastest way to get help is to call or text us directly. We'll get you taken care of same day.</p>
+      <a href="tel:2514215742" style="display:block; width:100%; background:var(--red); color:white; padding:18px; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:800; letter-spacing:0.04em; transition:background 0.2s;" onmouseover="this.style.background='#e74c3c'" onmouseout="this.style.background='var(--red)'">(251) 421-5742</a>
+      <a href="sms:2514215742" style="display:block; width:100%; background:var(--bg-light); color:var(--blue); border:2px solid var(--border); padding:14px; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:1.4rem; font-weight:700; letter-spacing:0.04em; transition:background 0.2s;">💬 Send a Text Instead</a>
+      <p style="font-size:0.78rem; color:var(--gray-light);">Mon–Fri 7am–6pm · Emergency service available</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     SERVICE AREAS
+====================================================== -->
+<section class="areas-section">
+  <div class="areas-inner">
+    <div class="section-tag left">Where We Work</div>
+    <h2 class="section-title" style="font-size:2rem;text-align:left;">Serving Alabama &amp; Mississippi</h2>
+
+    <p style="font-size:0.85rem; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:0.1em; margin: 28px 0 12px;">Alabama</p>
+    <div class="areas-grid">
+      <div class="area-tag">Mobile, AL</div>
+      <div class="area-tag">Semmes, AL</div>
+      <div class="area-tag">Theodore, AL</div>
+      <div class="area-tag">Tillmans Corner, AL</div>
+      <div class="area-tag">Chickasaw, AL</div>
+      <div class="area-tag">Saraland, AL</div>
+      <div class="area-tag">Satsuma, AL</div>
+      <div class="area-tag">Creola, AL</div>
+      <div class="area-tag">Eight Mile, AL</div>
+      <div class="area-tag">Prichard, AL</div>
+      <div class="area-tag">Mount Vernon, AL</div>
+      <div class="area-tag">Grand Bay, AL</div>
+    </div>
+
+    <p style="font-size:0.85rem; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:0.1em; margin: 32px 0 12px;">Mississippi</p>
+    <div class="areas-grid">
+      <div class="area-tag">Moss Point, MS</div>
+      <div class="area-tag">Pascagoula, MS</div>
+      <div class="area-tag">Gautier, MS</div>
+      <div class="area-tag">Ocean Springs, MS</div>
+      <div class="area-tag">Biloxi, MS</div>
+      <div class="area-tag">D'Iberville, MS</div>
+      <div class="area-tag">Gulfport, MS</div>
+      <div class="area-tag">Lucedale, MS</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="#" style="display:inline-block; margin-bottom:16px;">
+        <svg viewBox="0 0 240 60" style="height:44px;width:auto;" xmlns="http://www.w3.org/2000/svg">
+          <text x="120" y="36" font-family="Arial Black,sans-serif" font-weight="900" font-size="34" fill="#ffffff" font-style="italic" letter-spacing="-1" text-anchor="middle">Ken Air</text>
+          <line x1="4" y1="42" x2="62" y2="42" stroke="#ffffff" stroke-width="1.5"/>
+          <line x1="178" y1="42" x2="236" y2="42" stroke="#ffffff" stroke-width="1.5"/>
+          <text x="120" y="55" font-family="Arial,sans-serif" font-weight="700" font-size="10" fill="#ffffff" text-anchor="middle" letter-spacing="3">SERVICES, INC</text>
+        </svg>
+      </a>
+      <p>Owned and operated by Ken Grice since 2003. Serving Mobile County and the Gulf Coast with honest HVAC service, fair pricing, and work done right the first time.</p>
+      <a href="tel:2514215742" class="footer-phone">📞 (251) 421-5742</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">A/C Repair &amp; Maintenance</a></li>
+        <li><a href="#services">New A/C Installation</a></li>
+        <li><a href="#services">Heating Services</a></li>
+        <li><a href="#services">Duct &amp; Vent Services</a></li>
+        <li><a href="#services">Ductless Systems</a></li>
+        <li><a href="#services">Thermostat Services</a></li>
+        <li><a href="#services">Standby Generators</a></li>
+        <li><a href="#services">HVAC Maintenance</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#contact">Schedule Service</a></li>
+        <li><a href="#contact">Request a Quote</a></li>
+        <li><a href="#financing">Financing Options</a></li>
+        <li><a href="#reviews">Customer Reviews</a></li>
+        <li><a href="tel:2514215742">Call Now</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="#areas">Mobile, AL</a></li>
+        <li><a href="#areas">Semmes, AL</a></li>
+        <li><a href="#areas">Theodore, AL</a></li>
+        <li><a href="#areas">Saraland, AL</a></li>
+        <li><a href="#areas">Pascagoula, MS</a></li>
+        <li><a href="#areas">Ocean Springs, MS</a></li>
+        <li><a href="#areas">Biloxi, MS</a></li>
+        <li><a href="#areas">Gulfport, MS</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Ken Air Services, Inc. · 11165 Cricket Hollow, Semmes, AL 36575 · All Rights Reserved</p>
+    <div class="footer-license">AL Lic. #03158 · MS Lic. #50923 · Licensed &amp; Insured in Alabama &amp; Mississippi · In Business Since 2003 · Owner: Ken Grice</div>
+  </div>
+</footer>
+
+<!-- ======================================================
+     STICKY MOBILE CTA
+====================================================== -->
+<a href="tel:2514215742" class="sticky-cta">📞 Call (251) 421-5742 · Tap to Call Now</a>
+
+<!-- ======================================================
+     JAVASCRIPT
+====================================================== -->
+<script>
+  function showTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.promo-card, .review-card, .about-stat, .cert-badge, .area-tag').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+
+  // ── Web3Forms contact form submission ──
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('contactSubmitBtn');
+    const msg = document.getElementById('contactFormMsg');
+    const originalText = btn.textContent;
+
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+    msg.style.display = 'none';
+
+    const formData = new FormData(this);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: json
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        msg.style.display = 'block';
+        msg.style.background = '#d4edda';
+        msg.style.color = '#155724';
+        msg.style.border = '1px solid #c3e6cb';
+        msg.innerHTML = '✓ Message sent! Ken\'s team will be in touch shortly.';
+        this.reset();
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
+    } catch (err) {
+      msg.style.display = 'block';
+      msg.style.background = '#f8d7da';
+      msg.style.color = '#721c24';
+      msg.style.border = '1px solid #f5c6cb';
+      msg.innerHTML = '✗ Something went wrong. Please call us at <a href="tel:2514215742" style="color:#721c24;font-weight:700;">(251) 421-5742</a>.';
+    }
+
+    btn.textContent = originalText;
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  });
+</script>
+</body>
+</html>
